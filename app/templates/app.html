@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/project.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/chartDown.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/chartUpper.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/member.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Gantt chart</title>
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <div id="header-container">
+        <div class="title-wrapper">
+            <h1 class="project-name">{{ current_user.real_name }}さん、ようこそ。</h1>
+            <p>プロジェクトを選択・作成して制作を始めましょう!</p>
+        </div>
+        <div class="header-button-wrapper"></div>
+    </div>
+
+    <div id="container">
+
+        <!-- プロジェクトコンテンツ -->
+        <div id="project-container">
+            <button class="new-project-button" onclick="location.href='/create_team'">New Project</button>
+            <p class="project-p">Your Project</p>
+            <div class="project-button-wrapper">
+
+            </div>
+        </div>
+
+        <!-- ガントチャートコンテンツ -->
+        <div id="chart-container">
+            <div class="upper-wrapper">
+                <div class="space"></div>
+                <div class="date"></div>
+            </div>
+            <div class="down-wrapper">
+                <div class="member-task-wrapper"></div>
+                <div class="chart-wrapper"></div>
+            </div>
+        </div>
+
+        <!-- <button class="test-button">クリック</button> -->
+
+        <!-- メンバーコンテンツ -->
+        <div id="member-container">
+            <p class="member-p">Member</p>
+            <div class="member-card-wrapper"></div>
+        </div>
+
+    </div>
+    <div class="form-container">
+
+    </div>
+    <!-- <script type="module" src="button.js"></script> -->
+    <!-- <script src="./scripts/app.js" type="module"></script> -->
+    <script>
+        // ページ読み込み時にsessionStorageを初期化
+        {% if team_button_dict %}
+        var buttonDict = {{ team_button_dict| tojson}};
+        // console.log(buttonDict);
+        // if (buttonDict.length > 0) {
+        //     console.log(buttonDict[0].id);
+        // }
+        {% else %}
+        var buttonDict = null;
+        console.log("buttonDict is not defined.");
+        {% endif %}
+
+
+
+    </script>
+    <script type="module" src="{{ url_for('static', filename='script/app.js') }}"></script>
+
+</body>
+
+</html>

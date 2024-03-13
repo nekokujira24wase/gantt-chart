@@ -1,0 +1,130 @@
+#project-container {
+    width: 190px;
+    height: 88vh;
+    background: #008899;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.new-project-button {
+    background: #008899;
+    width: 162px;
+    height: 44.61px;
+    border: solid 1px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin: 34.04px 0px 39px 0px;
+    box-shadow: 4px 3px 8px -3px rgba(0, 0, 0, 0.5);
+}
+
+.project-p {
+    /* text-align: center; */
+    font-size: 15.5px;
+    font-weight: bold;
+}
+
+
+.project-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background: #008899;
+    width: 92%;
+    height: 70%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: nowrap;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}
+
+.project-button-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.project-button-wrapper > :first-child {
+    margin-top: 24px;
+}
+
+.project-button-wrapper > :last-child {
+    margin-bottom: 24px;
+}
+
+.project-name-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 162px;
+    height: 55.58px;
+    background: #008899;
+    border: solid 1px;
+    border-radius: 10px;
+    margin: 5px 0;
+    box-shadow: 5px 3px 8px -3px rgba(0, 0, 0, 0.5);
+}
+
+
+.project-name-part-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6px 23px 5px 5px ;
+    gap: 7px;
+}
+
+.img-color-div {
+    width: 31.43px;
+    height: 31.43px;
+    border-radius: 17px;
+    /* background: blueviolet; */
+}
+
+.project-name-part-wrapper span {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.project-name-wrapper {
+    width: 77px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.progress-bar-wrapper {
+    position: relative;
+    left: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    /* align-items: center; */
+    width: 100%;
+    gap: 1.5px;
+}
+
+.project-name-progress-bar {
+    border-radius: 5px;
+    height: 3px;
+    width: 85%;
+    margin-bottom: 7px;
+}
+
+.logout-button {
+    background: #008899;
+    width: 162px;
+    height: 22.03px;
+    border: solid 1px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 0.8em;
+    margin: 15px 0 0 0;
+    box-shadow: 4px 3px 8px -3px rgba(0, 0, 0, 0.5);
+}
+
+.active {
+    background: #017281;
+}

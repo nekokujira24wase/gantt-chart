@@ -1,0 +1,104 @@
+.down-wrapper {
+    display: flex;
+}
+
+.member-block{
+    background: #D9D9D9;
+    width: 190px;
+    height: 56px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border: solid 1px;
+}
+
+.member-name {
+    font-weight: bold;
+}
+
+.color-ball {
+    width: 13.5px;
+    height: 13.5px;
+    border-radius: 7px;
+    margin: 0 15px 0 12px;
+    }
+
+.post-name {
+    width: fit-content;
+    font-size: 0.3em;
+    position: relative;
+    top: 1.5px;
+    left: 6px;
+    color: #919191;
+}
+
+.task-block {
+    background-color: #D9D9D9;
+    width: 190px;
+    height: 56px;
+    border: solid 1px;
+}
+
+.task-wrapper {
+    position: relative;
+    top: 2.5px;
+    text-align: center;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-name-wrapper {
+    width: 130px;
+}
+
+.delete-btn {
+    border: none;
+    background: #D9D9D9;
+}
+
+.task-checkbox {
+    position: relative;
+    left: 9px;
+}
+
+.member-task-wrapper {
+    background: rgb(255, 255, 255);
+    height: 78vh;
+    width: 190px;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.chart-wrapper {
+    width: 60.4vw;
+    height: 78vh;
+    background: rgb(255, 255, 255);
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.chart-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.block-wrapper {
+    display: flex;
+}
+
+.block {
+    border: solid 1px ;
+    height: 56px;
+    width: 39px;
+}
+
+.task-bar {
+    height: 14px;
+    position: relative;
+    top: 19.5px;
+    margin-left: 8px;
+    border-radius: 9px;
+
+}

@@ -1,0 +1,94 @@
+#member-container {
+    width: 190px;
+    height: 88vh;
+    background: #008899;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.member-p {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.member-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #4a0099;
+    background: #008899;
+    width: 92%;
+    height: 84.7%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: nowrap;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}
+
+.member-card-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.member-card-wrapper > :first-child {
+    margin-top: 24px;
+}
+
+.member-card-wrapper > :last-child {
+    margin-bottom: 24px;
+}
+
+.member-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    width: 162px;
+    height: fit-content;
+    background: #008899;
+    border: solid 1px;
+    border-radius: 10px;
+    margin: 5px 0;
+    box-shadow: 4px 3px 8px -3px rgba(0, 0, 0, 0.5);
+}
+
+.member-card-part-wrapper {
+    position: relative;
+    left: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 6px 23px 5px 5px ;
+    gap: 7px;
+}
+
+.member-card-part-wrapper h2 {
+    font-size: 1.2em;
+}
+
+.member-card-post-name {
+    color: blue;
+    font-size: 0.6em;
+    margin-bottom: 1.2px;
+}
+
+.member-card-progress-bar{
+    border-radius: 5px;
+    height: 3px;
+    width: 85%;
+    margin-bottom: 7px;
+}
+
+.detail-button {
+    background: #008899;
+    width: 124px;
+    height: 22.03px;
+    border: solid 1px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 0.8em;
+    margin: 0 20px;
+    box-shadow: 4px 3px 8px -3px rgba(0, 0, 0, 0.5);
+}

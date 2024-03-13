@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>タスク作成</title>
+    <!-- Bootstrap CSSの読み込み -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2>タスク作成</h2>
+        <form id="task-form" method="POST">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                {{ form.task_name.label(class_="form-label") }}
+                {{ form.task_name(class_="form-control") }}
+                {% if form.task_name.errors %}
+                {% for error in form.task_name.errors %}
+                <div class="alert alert-danger">{{ error }}</div>
+                {% endfor %}
+                {% endif %}
+            </div>
+            <div class="form-group">
+                {{ form.post.label(class_="form-label") }}
+                {{ form.post(class_="form-control") }}
+                {% if form.post.errors %}
+                {% for error in form.post.errors %}
+                <div class="alert alert-danger">{{ error }}</div>
+                {% endfor %}
+                {% endif %}
+            </div>
+            <div class="form-group">
+                {{ form.start_date.label(class_="form-label") }}
+                {{ form.start_date(class_="form-control") }}
+                {% if form.start_date.errors %}
+                {% for error in form.start_date.errors %}
+                <div class="alert alert-danger">{{ error }}</div>
+                {% endfor %}
+                {% endif %}
+            </div>
+            <div class="form-group">
+                {{ form.end_date.label(class_="form-label") }}
+                {{ form.end_date(class_="form-control") }}
+                {% if form.end_date.errors %}
+                {% for error in form.end_date.errors %}
+                <div class="alert alert-danger">{{ error }}</div>
+                {% endfor %}
+                {% endif %}
+            </div>
+            <input id="team_id" type="hidden" name="extraData">
+            {{ form.create(class_="btn btn-primary") }}
+        </form>
+    </div>
+
+    <!-- jQuery、Popper.js、Bootstrap JSの読み込み -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var inputTag = document.getElementById('team_id');
+            inputTag.value = sessionStorage.getItem('team_id');
+        });
+    </script>
+</body>
+
+</html>

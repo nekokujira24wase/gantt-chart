@@ -1,0 +1,43 @@
+.upper-wrapper {
+    display: flex;
+}
+
+.space {
+    background: #D9D9D9;
+    border: solid 1px;
+    height: 79px;
+    width: 190px;
+}
+
+.date {
+    width: 60.4vw;
+    background: #D9D9D9;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+
+.year-block {
+    border: solid 1px;
+    width: 3000vw;
+}
+
+.month-block {
+    border: solid 1px;
+}
+
+.month-days-wrapper {
+    display: flex;
+}
+
+.days-wrapper {
+    display: flex;
+}
+
+.day-block {
+    height: 27px;
+    width: 39px;
+    font-size: 0.9em;
+    border: solid 1px;
+    text-align: center;
+}
